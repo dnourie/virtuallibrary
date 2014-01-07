@@ -1,0 +1,27 @@
+.container
+  .row
+  .col-md-10
+    #bookstitle Books Available to Borrow
+    - if @books.empty?
+      %span.text-warning There are no books!
+    - else
+    %table#books.display/
+    %thead
+      %tr
+        %th Cover
+        %th Title
+        %th Author
+        %th Categories
+        %th Description
+        %th Owner
+      %tbody
+        - @books.each do |book|
+          %tr
+            %td
+              %img{:align => "left", :src => book.image_url, :vspace => "8", :width => 60, :height => 80}/
+            %td= link_to book.title, {:action => 'show', :id => book.id}
+            %td= book.author
+            %td= book.category_names
+            %td= truncate book.description, :length=>200
+            %td= book.user_name
+    

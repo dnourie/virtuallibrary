@@ -1,0 +1,14 @@
+%header#content-header
+  %h3
+    Reviews for #{link_to(@book.title, @book)}
+%ol#reviews
+  - @reviews.each do |review|
+    %li
+      %span.review= pluralize(review.stars, 'star')
+      %span.user
+        by #{review.name}
+      %span.date
+        = time_ago_in_words(review.created_at)
+        ago
+      %p
+        \&quot;#{review.comment}&quot;

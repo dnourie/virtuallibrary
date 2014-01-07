@@ -1,0 +1,105 @@
+div#wrapperHeader div#header {
+ width:748px;
+ height:140px;
+ margin-top:10px;
+}
+
+div#wrapperHeader div#header img {
+ float:left;
+ width:748; /* the width of the logo */
+ height:140; /* the height of the logo */
+ margin-top:10px;
+ margin-left:90px;
+  
+}
+
+div#wrapperFooter {
+  float:center;
+  p {
+    font-family: verdana, arial, helvetica, sans-serif;
+    color: #0071bc;
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+#bookstitle {
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 15px 5px 10px;
+    font-size: 18px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    background-color: #0071bc;
+    color: #fff;
+}
+
+ul li {
+    font-size: 14px;
+    list-style: square;
+}
+
+a:link {color: #008000; text-decoration: none; }
+a:active {color: #0000ff; text-decoration: none; }
+a:visited {color: #008000; text-decoration: none; }
+a:hover {color: #0071bc; text-decoration: none; }
+
+#bookicon > div > img{
+    width:100px;
+    height:100px;
+
+}
+
+div#greeting {
+	float: left;
+	margin-top:10px;
+	margin-left:0;
+}
+
+#notice {
+  color: green;
+  font-size: 16px;
+}
+
+div#bookimage {
+	width: 150px;
+	height:250px;
+
+}
+
+div#bookshow {
+text-align: left;
+padding: 10px;
+margin-left:10;
+width:400px;
+height:550px;
+-webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 20px;
+border:8px solid #4B8240;
+background:rgba(227,223,211,0.7);
+-webkit-box-shadow: #B3B3B3 16px 16px 16px;
+-moz-box-shadow: #B3B3B3 10px 10px 10px; 
+box-shadow: #B3B3B3 10px 10px 10px;
+}
+
+
+
+
+   
