@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 20140106153652) do
     t.integer "category_id"
   end
 
-  add_index "book_categories", ["book_id"], name: "index_book_categories_on_book_id"
-  add_index "book_categories", ["category_id"], name: "index_book_categories_on_category_id"
+  add_index "book_categories", ["book_id"], name: "index_book_categories_on_book_id", using: :btree
+  add_index "book_categories", ["category_id"], name: "index_book_categories_on_category_id", using: :btree
 
   create_table "book_histories", force: true do |t|
     t.integer  "book_id",                     null: false
@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 20140106153652) do
     t.datetime "updated_at"
   end
 
-  add_index "book_histories", ["book_id"], name: "index_book_histories_on_book_id"
-  add_index "book_histories", ["user_id"], name: "index_book_histories_on_user_id"
+  add_index "book_histories", ["book_id"], name: "index_book_histories_on_book_id", using: :btree
+  add_index "book_histories", ["user_id"], name: "index_book_histories_on_user_id", using: :btree
 
   create_table "books", force: true do |t|
     t.integer  "user_id"
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 20140106153652) do
     t.datetime "updated_at"
   end
 
-  add_index "reviews", ["book_id"], name: "index_reviews_on_book_id"
+  add_index "reviews", ["book_id"], name: "index_reviews_on_book_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"
