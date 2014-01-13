@@ -1,8 +1,14 @@
-div#wrapperHeader div#header {
- width:748px;
- height:140px;
- margin-top:10px;
+html, body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0px;
+  padding: 10px;
 }
+
+/* Header and logo */
 
 div#wrapperHeader div#header img {
  float:left;
@@ -10,32 +16,42 @@ div#wrapperHeader div#header img {
  height:140; /* the height of the logo */
  margin-top:10px;
  margin-left:90px;
+ margin-bottom: 55px;
   
 }
+
+/* Footer settings */
 
 div#wrapperFooter {
   float:center;
   p {
     font-family: verdana, arial, helvetica, sans-serif;
     color: #0071bc;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 18px;
   }
 }
 
-body {
-  background-color: #fff;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-}
+/* Text and Lists */
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 18px;
 }
+
+
+ul li {
+    font-size: 14px;
+    list-style: square;
+}
+
+a:link {color: #008000; text-decoration: none; }
+a:active {color: #0000ff; text-decoration: none; }
+a:visited {color: #008000; text-decoration: none; }
+a:hover {color: #0071bc; text-decoration: none; }
+
+/* The Form for Adding Books */
 
 #bookstitle {
     text-align: center;
@@ -50,15 +66,7 @@ p, ol, ul, td {
     color: #fff;
 }
 
-ul li {
-    font-size: 14px;
-    list-style: square;
-}
-
-a:link {color: #008000; text-decoration: none; }
-a:active {color: #0000ff; text-decoration: none; }
-a:visited {color: #008000; text-decoration: none; }
-a:hover {color: #0071bc; text-decoration: none; }
+/* Add a book icon */
 
 #bookicon > div > img{
     width:100px;
@@ -66,22 +74,25 @@ a:hover {color: #0071bc; text-decoration: none; }
 
 }
 
+/* Greeting area and links */
+
 div#greeting {
 	float: left;
 	margin-top:10px;
 	margin-left:0;
 }
 
-#notice {
-  color: green;
-  font-size: 16px;
-}
+
+
+/* Borrow Book Image */
 
 div#bookimage {
 	width: 150px;
 	height:250px;
 
 }
+
+/* Individual book Show page */
 
 div#bookshow {
 text-align: left;
@@ -97,6 +108,31 @@ background:rgba(227,223,211,0.7);
 -webkit-box-shadow: #B3B3B3 16px 16px 16px;
 -moz-box-shadow: #B3B3B3 10px 10px 10px; 
 box-shadow: #B3B3B3 10px 10px 10px;
+}
+
+/* Login Form */
+
+div#loginform {
+float: none;
+text-align: left;
+padding-top: 0px;
+padding-left: 10px; 
+width:300px;
+height:350px;
+-webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 20px;
+border:8px solid #4B8240;
+background:rgba(227,223,211,0.7);
+-webkit-box-shadow: #B3B3B3 16px 16px 16px;
+-moz-box-shadow: #B3B3B3 10px 10px 10px; 
+box-shadow: #B3B3B3 10px 10px 10px;
+}
+
+
+#notice {
+  color: green;
+  font-size: 16px;
 }
 
 

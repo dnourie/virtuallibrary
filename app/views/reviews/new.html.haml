@@ -2,24 +2,17 @@
 	.row
 	.col-md-3
 	.col-md-6
-		%h4
-		New Review for #{link_to(@book.title, @book)}
-		%p
-		#bookshow/
-		%p
-			= form_for([@book, @review]) do |f|
-				= f.label :name 
-				%br
-				= f.text_field :name, size: 25, autofocus: true
-				%p
-				= f.label :comment
-				%br
-				= f.text_area :comment, cols: 30, rows: 15, placeholder: "What did you think?"
-				%br
-				.actions
-				= f.submit 'Post Review'
-				= link_to "Cancel", @book, class: 'button'
-		.col-md-3
+	#bookshow/
+	%h4 New Review for #{link_to(@book.title, @book)}
+	= form_for([@book, @review]) do |f|
+		= f.label :comment
+		%br
+		= f.text_area :comment, cols: 30, rows: 15, placeholder: "What did you think?"
+		%br
+		.actions
+		= f.submit 'Post Review'
+		= link_to "Cancel", @book, class: 'button'
+	.col-md-3
 	
 		
 		

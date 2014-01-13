@@ -1,0 +1,28 @@
+.container
+.row
+.col-md-2.col-md-offset-4
+  #loginform/
+  - if flash[:alert]
+    %p#notice
+      = flash[:alert]
+  %h3 Please Log In
+  %p
+  = form_tag sessions_path do
+    .field
+      = label_tag :name
+      %br/
+      = text_field_tag :name, params[:name]
+    .field
+      = label_tag :email
+      %br/
+      = text_field_tag :email, params[:email]
+    .field
+      = label_tag :password
+      %br/
+      = password_field_tag :password
+    .actions= submit_tag "Log In"
+  %p
+    = link_to "Sign Up", signup_path
+  .col.md-6
+
+

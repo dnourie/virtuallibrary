@@ -10,7 +10,8 @@ class ReviewsController < ApplicationController
 	end
 
 	def create
-  @review = @book.reviews.new(review_params)
+  @review = @book.reviews.new(review_params.merge(user_id: current_user.id))
+  @review.user = current_user
   if @review.save
     redirect_to book_reviews_path(@book), 
       notice: "Thanks for your review!"
@@ -27,7 +28,7 @@ end
 private
 
 	def review_params
-	  params.require(:review).permit(:name, :comment, :stars)
+	  params.require(:review).permit(:comment, :current_user)
 	end
 	
 	def set_book

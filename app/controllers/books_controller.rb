@@ -31,7 +31,7 @@ class BooksController < ApplicationController
     @book.user = current_user
     respond_to do |format|
       if @book.save
-        format.html { redirect_to @book, notice: 'Book was successfully created.' }
+        format.html { redirect_to @book, notice: 'Your book was successfully added!' }
         format.json { render action: 'show', status: :created, location: @book }
       else
         format.html { render action: 'new' }
