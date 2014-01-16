@@ -1,7 +1,15 @@
+/* Colors */
+$logo_blue: #0071bc;
+$logo_green: #008000;
+$gray_shadow: #B3B3B3;
+
+/* Fonts & Type */
+$verdana: helvetica, arial, verdana, freesans, sans-serif;
+
 html, body {
   background-color: #fff;
   color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: $verdana;
   font-size: 14px;
   line-height: 18px;
   margin: 0px;
@@ -25,8 +33,8 @@ div#wrapperHeader div#header img {
 div#wrapperFooter {
   float:center;
   p {
-    font-family: verdana, arial, helvetica, sans-serif;
-    color: #0071bc;
+    font-family: $verdana;
+    color: $logo_blue;
     font-size: 14px;
     line-height: 18px;
   }
@@ -35,7 +43,7 @@ div#wrapperFooter {
 /* Text and Lists */
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: $verdana;
   font-size: 14px;
   line-height: 18px;
 }
@@ -46,10 +54,11 @@ ul li {
     list-style: square;
 }
 
-a:link {color: #008000; text-decoration: none; }
+a:link {color: $logo_green; text-decoration: none; }
 a:active {color: #0000ff; text-decoration: none; }
-a:visited {color: #008000; text-decoration: none; }
-a:hover {color: #0071bc; text-decoration: none; }
+a:visited {color: $logo_green; text-decoration: none; }
+a:hover {color: $logo_blue; text-decoration: underline; }
+
 
 /* The Form for Adding Books */
 
@@ -62,7 +71,7 @@ a:hover {color: #0071bc; text-decoration: none; }
     margin-right: 0px;
     margin-top: 10px;
     margin-bottom: 0px;
-    background-color: #0071bc;
+    background-color: $logo_blue;
     color: #fff;
 }
 
@@ -105,9 +114,9 @@ height:550px;
 border-radius: 20px;
 border:8px solid #4B8240;
 background:rgba(227,223,211,0.7);
--webkit-box-shadow: #B3B3B3 16px 16px 16px;
--moz-box-shadow: #B3B3B3 10px 10px 10px; 
-box-shadow: #B3B3B3 10px 10px 10px;
+-webkit-box-shadow: 16px 16px 16px $gray_shadow;
+-moz-box-shadow: 10px 10px 10px $gray_shadow; 
+box-shadow: 10px 10px 10px $gray_shadow;
 }
 
 /* Login Form */
@@ -122,16 +131,16 @@ height:350px;
 -webkit-border-radius: 20px;
 -moz-border-radius: 20px;
 border-radius: 20px;
-border:8px solid #4B8240;
+border:8px solid $logo_green;
 background:rgba(227,223,211,0.7);
--webkit-box-shadow: #B3B3B3 16px 16px 16px;
--moz-box-shadow: #B3B3B3 10px 10px 10px; 
-box-shadow: #B3B3B3 10px 10px 10px;
+-webkit-box-shadow: 16px 16px 16px $gray_shadow;
+-moz-box-shadow: 10px 10px 10px $gray_shadow; 
+box-shadow: 10px 10px 10px $gray_shadow;
 }
 
 
 #notice {
-  color: green;
+  color: logo_green;
   font-size: 16px;
 }
 
