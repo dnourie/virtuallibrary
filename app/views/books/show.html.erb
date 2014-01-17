@@ -49,11 +49,12 @@
   <table align=right>
     <tr>
       <td align="center">
-        <% if false && @book.is_borrowed? %>
+      <% if true && @book.is_borrowed? %>
+          
           <% if @book.borrower_id == current_user.id %>
             <p>You are borrowing this book.</p>
           <% else %>
-            <p>Book borrowed.</p>
+            <p>This book has been borrowed.</p>
           <% end %>
         <% else %>
           <%= form_for @book_history do |f| %>
