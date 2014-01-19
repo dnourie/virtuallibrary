@@ -2,9 +2,6 @@
 .row
 .col-md-2.col-md-offset-4
   #loginform/
-  - if flash[:alert]
-    %p#notice
-      = flash[:alert]
   %h3 Please Log In
   %p
   = form_tag sessions_path do

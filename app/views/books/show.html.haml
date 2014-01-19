@@ -1,0 +1,74 @@
+.container
+  .row
+    .col-md-1
+    .col-md-4
+      #bookshow
+        %strong
+          = @book.title
+        %p
+          = truncate @book.description, :length=>720
+        %p
+          %img{:align => "left", :height => "130", :hspace => "8", :src => @book.image_url, :width => "110"}/
+        %p
+          %strong Isbn:
+          = @book.isbn
+        %p
+          %strong Author:
+          = @book.author
+        %p
+          %strong Owner:
+          = @book.user_name
+        %p
+          %strong Rate this book:
+        %p
+          .rw-ui-container
+          %p
+            = link_to "Write Review", new_book_review_path(@book)
+          %p
+            = link_to pluralize(@book.reviews.size, "Review"), book_reviews_path(@book)
+        = link_to 'Back', books_path
+    .col-md-5
+      %table{:align => "right"}
+        %tr
+          %td{:align => "center"}
+            - if true && @book.is_borrowed?
+              %p This book has been borrowed.
+            - else
+              = form_for @book_history do |f|
+                = f.hidden_field :book_id
+                = f.hidden_field :user_id
+                = f.submit "Borrow", class: 'btn btn-success'
+        %tr
+          %td{:align => "center"}
+            = image_tag 'openbook.jpeg'
+        %tr
+          %td{:align => "center"}
+            %h4= @book.title
+    .col-md-2
+    :javascript
+      (function(d, t, e, m){
+        // Async Rating-Widget initialization.
+          window.RW_Async_Init = function(){
+              RW.init({
+                  huid: "149932",
+                  uid: "397dfec8b894b41fcf866e91b8cb0a04",
+                  source: "website",
+                  options: {
+                      "size": "medium",
+                      "style": "ratingwidget"
+                  } 
+              });
+              RW.render();
+          };
+      
+          // Append Rating-Widget JavaScript library.
+          var rw, s = d.getElementsByTagName(e)[0], id = "rw-js",
+              p = d.location.protocol, a = ("https:" == p ? "secure." + 
+              m + "js/" : "js." + m), ck = "Y" + t.getFullYear() + "M" + 
+              t.getMonth() + "D" + t.getDate();
+          if (d.getElementById(id)) return;              
+          rw = d.createElement(e);
+          rw.id = id; rw.async = true; rw.type = "text/javascript";
+          rw.src = p + "//" + a + "external.min.js?ck=" + ck;
+          s.parentNode.insertBefore(rw, s);
+          }(document, new Date(), "script", "rating-widget.com/"));
