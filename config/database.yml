@@ -20,8 +20,8 @@ development:
   host: localhost
   database: virtuallibrary_development
   pool: 5
-  username: vlapp
-  password: Saturn2
+  username: rubydb
+  password: Neptune8
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -49,13 +49,13 @@ test:
   encoding: unicode
   database: virtuallibrary_test
   pool: 5
-  username: vlapp
-  password: Saturn2
+  username: rubydb
+  password: Neptune8
 
 production:
   adapter: postgresql
   encoding: unicode
   database: virtuallibrary_production
   pool: 5
-  username: vlapp
-  password: Saturn2
+  username: rubydb
+  password: Neptune8
