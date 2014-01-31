@@ -32,7 +32,7 @@
         %tr
           %td{:align => "center"}
             - if true && @book.is_borrowed?
-              %p This book has been borrowed.
+              %p This book is not available.
             - else
               = form_for @book_history do |f|
                 = f.hidden_field :book_id

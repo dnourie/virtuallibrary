@@ -11,9 +11,14 @@ class Book < ActiveRecord::Base
   validates :title, presence: true
 
   # Instance methods
-  def is_borrowed?
-    book_histories.find_by(is_returned: false).present?
+  def get_borrowed
+  book_histories.where(is_returned: false).last
   end
+
+  def is_borrowed?
+  get_borrowed.present?
+  end
+
 
   def borrower_id
     book_histories.last.user_id

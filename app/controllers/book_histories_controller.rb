@@ -35,18 +35,14 @@ class BookHistoriesController < ApplicationController
     end
   end
 
+
   # PATCH/PUT /book_histories/1
   # PATCH/PUT /book_histories/1.json
   def update
-    respond_to do |format|
-      if @book_history.update(book_history_params)
-        format.html { redirect_to @book_history, notice: 'Book history was successfully updated.' }
-      else
-        format.html { render action: 'edit' }
-      end
-    end
+    @book_history.update_attribute(:is_returned, true)
+    redirect_to @book_history.book, notice: "Book successfully returned."
   end
-
+ 
   # DELETE /book_histories/1
   # DELETE /book_histories/1.json
   def destroy

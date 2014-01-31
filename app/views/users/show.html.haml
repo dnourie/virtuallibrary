@@ -13,6 +13,7 @@
         %th Description
         %th Author
         %th
+        %th Status
         %th
     %tbody
       - @books.each do |book|
@@ -23,5 +24,11 @@
           %td= truncate book.description, :length=>200
           %td= book.author
           %td= link_to 'Edit', edit_book_path(book), class: 'btn btn-default'
+          %td
+            - borrowed = book.get_borrowed
+            - if book.is_borrowed?
+              = button_to "Return book", borrowed, method: :patch, class: "btn", class: 'btn btn-success'
+            - else
+              %p Available
           %td= link_to "Delete", book, :method => :delete, :confirm => "Are you sure?", class: 'btn btn-danger'
-  .col-med.2
+  .col-med.2a
