@@ -3,7 +3,7 @@
     .col-md-10
       #wrapperHeader
         #header
-          = image_tag 'virtuallibrarylogo.jpg'
+          = link_to(image_tag("virtuallibrarylogo.jpg",:alt=> "logo",:title=> "Home"),"/") 
  
     .col-md-2
       #greeting
@@ -14,6 +14,8 @@
             %li= link_to "Home", books_path
             %li= link_to "About", '/pages/1'
             %li= link_to "My Library", current_user
+            %li= link_to t('Contact'), new_contact_path
+
             %li= link_to "Log Out", logout_path
           - else
             %li= link_to "Log In", login_path

@@ -16,6 +16,8 @@ gem 'jquery-ui-rails'
 gem 'haml'
 gem 'turbolinks'
 gem 'therubyracer', platforms: :ruby
+gem 'mail_form', '~> 1.5.0.rc'
+gem 'simple_form', '~> 3.0.0.rc'
 
 #ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'

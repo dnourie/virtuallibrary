@@ -23,4 +23,8 @@ class Book < ActiveRecord::Base
   def borrower_id
     book_histories.last.user_id
   end
+
+
+  def get_latest_book_history(user_id) 
+  end
 end

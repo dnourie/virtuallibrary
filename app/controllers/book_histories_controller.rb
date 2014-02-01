@@ -48,7 +48,7 @@ class BookHistoriesController < ApplicationController
   def destroy
     @book_history.destroy
     respond_to do |format|
-      format.html { redirect_to book_histories_url }
+      format.html { redirect_to current_user }
     end
   end
 
