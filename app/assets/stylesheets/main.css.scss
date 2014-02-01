@@ -131,8 +131,27 @@ float: none;
 text-align: left;
 padding-top: 0px;
 padding-left: 10px; 
-width:300px;
-height:350px;
+width:340px;
+height:400px;
+-webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 20px;
+border:8px solid $logo_green;
+background:rgba(227,223,211,0.7);
+-webkit-box-shadow: 16px 16px 16px $gray_shadow;
+-moz-box-shadow: 10px 10px 10px $gray_shadow; 
+box-shadow: 10px 10px 10px $gray_shadow;
+}
+
+/* Login Form */
+
+div#joinform {
+float: none;
+text-align: left;
+padding-top: 0px;
+padding-left: 10px; 
+width:360px;
+height:500px;
 -webkit-border-radius: 20px;
 -moz-border-radius: 20px;
 border-radius: 20px;

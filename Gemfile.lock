@@ -96,6 +96,7 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    recaptcha (0.3.6)
     ref (1.0.5)
     rspec-core (2.14.7)
     rspec-expectations (2.14.4)
@@ -167,6 +168,7 @@ DEPENDENCIES
   mail_form (~> 1.5.0.rc)
   pg
   rails (= 4.0.0)
+  recaptcha
   rspec-rails
   sass-rails (~> 4.0.0)
   sdoc
