@@ -1,7 +1,7 @@
 .container
   .row
   .col-md-10
-    #bookstitle Books Available to Borrow
+    #bookstitle Books in the Library
     - if @books.empty?
       %span.text-warning There are no books!
     - else
@@ -13,9 +13,10 @@
         %th Author
         %th Categories
         %th Description
+        %th Status
         %th Owner
       %tbody
-        - @books.each do |book|
+        - @books.each do |book| 
           %tr
             %td
               %img{:align => "left", :src => book.image_url, :vspace => "8", :width => 60, :height => 80}/
@@ -23,5 +24,11 @@
             %td= book.author
             %td= book.category_names
             %td= truncate book.description, :length=>200
+            %td
+              - borrowed = book.get_borrowed
+              - if book.is_borrowed?
+                %p Unavailable
+              -else
+                %p Available
             %td= book.user_name
-  .col-med.2  
+  .col-med.2 
