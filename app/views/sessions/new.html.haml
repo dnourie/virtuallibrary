@@ -17,6 +17,7 @@
       = label_tag :password
       %br/
       = password_field_tag :password
+      = recaptcha_tags
     .actions= submit_tag "Log In"
   %p
     = link_to "Sign Up", signup_path

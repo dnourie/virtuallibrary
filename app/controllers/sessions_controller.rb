@@ -8,9 +8,10 @@ class SessionsController < ApplicationController
     user = User.find_by(name: params[:name])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
+      verify_recaptcha()
       redirect_to root_url, notice: "Logged in!"
     else
-      flash.now.alert = "Name or password is invalid"
+      flash.alert = "Name or password is invalid"
       render "new"
     end
   end

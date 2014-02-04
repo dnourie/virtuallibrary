@@ -1,6 +1,5 @@
 = form_for(@user) do |f|
-  - if @user.errors.any?
-    #error_explanation
+  - f.error_messages
       %h2
         = pluralize(@user.errors.count, "error")
         prohibited this user from being saved:

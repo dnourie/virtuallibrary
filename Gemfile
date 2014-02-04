@@ -19,8 +19,9 @@ gem 'jquery-turbolinks'
 gem 'therubyracer', platforms: :ruby
 gem 'mail_form', '~> 1.5.0.rc'
 gem 'simple_form', '~> 3.0.0.rc'
+gem "dynamic_form"
 gem "recaptcha", :require => "recaptcha/rails"
-gem 'validates_email_format_of'
+
 
 #ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
