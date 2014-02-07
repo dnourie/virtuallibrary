@@ -21,6 +21,7 @@ gem 'mail_form', '~> 1.5.0.rc'
 gem 'simple_form', '~> 3.0.0.rc'
 gem "dynamic_form"
 gem "recaptcha", :require => "recaptcha/rails"
+gem 'font-awesome-rails'
 
 
 #ActiveModel has_secure_password

@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   validates :name, presence: true, uniqueness: true
   validates :email, presence: true
   validates :password, confirmation: true
-   validates :password, :length => { :in => 6..20 }
+  validates :password, :length => { :in => 6..20 }
 
 
   #

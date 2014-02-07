@@ -18,32 +18,22 @@ html, body {
   font-size: 14px;
   line-height: 18px;
   margin: 0px;
-  padding: 10px;
+  padding-top:3px;
+  padding-bottom:0px;
+  padding-right:10px;
+  padding-left:10px;;
 }
 
 /* Header and logo */
 
 div#wrapperHeader div#header img {
  float:left;
- width:748; /* the width of the logo */
- height:140; /* the height of the logo */
- margin-top:10px;
- margin-left:90px;
- margin-bottom: 55px;
-  
+ width:648; /* the width of the logo */
+ height:120; /* the height of the logo */
+ margin-top:5px;
+ margin-bottom: 0px;
 }
 
-/* Footer settings */
-
-div#wrapperFooter {
-  float:center;
-  p {
-    font-family: $verdana;
-    color: $logo_blue;
-    font-size: 14px;
-    line-height: 18px;
-  }
-}
 
 /* Text and Lists */
 
@@ -56,7 +46,7 @@ p, ol, ul, td {
 
 ul li {
     font-size: 14px;
-    list-style: square;
+    list-style: none;
 }
 
 a:link {color: $logo_green; text-decoration: none; }
@@ -68,39 +58,33 @@ a:hover {color: $logo_blue; text-decoration: underline; }
 /* The Form for Adding Books */
 
 #bookstitle {
-    text-align: center;
-    font-weight: bold;
-    padding: 5px 15px 5px 10px;
-    font-size: 18px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    background-color: $logo_blue;
-    color: #fff;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 15px 5px 10px;
+  font-size: 18px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  background-color: $logo_blue;
+  color: #fff;
 }
 
 /* Add a book icon */
 
 #bookicon > div > img{
+    float: right;
     width:100px;
     height:100px;
 
 }
 
-/* Greeting area and links */
-
-div#greeting {
-	float: left;
-	margin-top:10px;
-	margin-left:0;
-}
-
-
 
 /* Borrow Book Image */
 
 div#bookimage {
+  text-align:right;
+  margin-left: 20px;
 	width: 150px;
 	height:250px;
 
@@ -187,6 +171,8 @@ background-color: $red;
 border-color: $logo_blue;
 color: $white;
 }
+
+
 
 /*contact form */
 .hidden { display: none; }

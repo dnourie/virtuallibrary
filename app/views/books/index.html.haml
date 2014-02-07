@@ -1,6 +1,6 @@
-.container
+.container-fluid
   .row
-  .col-md-10
+  .col-md-12
     #bookstitle Books in the Library
     - if @books.empty?
       %span.text-warning There are no books!
@@ -31,4 +31,4 @@
               -else
                 %p Available
             %td= book.user_name
-  .col-med.2 
+ 

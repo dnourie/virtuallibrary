@@ -26,7 +26,7 @@ class UsersController < ApplicationController
 
   # POST /users
   # POST /users.json
-  
+
   def create
   
   if verify_recaptcha() && @user = User.new(user_params)
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
     session[:user_id] = @user.id
     redirect_to root_url, notice: "Thank you for signing up!"
   else
-    redirect_to signup_path, alert: "Sorry, try again. Fill all fields."
+    redirect_to signup_path, alert: "Sorry, fill all fields."
   end
 end
 

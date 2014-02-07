@@ -16,4 +16,3 @@
 //= require dataTables/jquery.dataTables.min
 //= reqiore dataTables/extra/TableTools
 //= require_tree .
-

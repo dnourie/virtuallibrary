@@ -1,26 +1,59 @@
-.container
+.container-fluid
   .row
-    .col-md-10
+    .col-md-7
       #wrapperHeader
-        #header
-          = link_to(image_tag("virtuallibrarylogo.jpg",:alt=> "logo",:title=> "Home"),"/") 
- 
+      #header
+      = link_to(image_tag("virtuallibrarylogo.jpg",:alt=> "logo",:title=> "Home", :float => "left"),"/")
     .col-md-2
-      #greeting
-        %ul
-          - if current_user
-            %li
-              Welcome, #{current_user.name}!
-            %li= link_to "Home", books_path
-            %li= link_to "About", '/pages/1'
-            %li= link_to "My Library", current_user
-            %li= link_to t('Contact'), new_contact_path
+      #bookicon
+      %div{:style => "text-align: center"}
+        = image_tag 'bookicon.jpeg' 
+        %br/
+        = link_to "Add a Book", new_book_path, class: 'btn btn-default btn-lg' 
+    .col-md-3
+      - if current_user
+        %h4{:align => "right"}/ 
+        Welcome, #{current_user.name}!
+      - else
+        %span.fa-stack.fa-lg
+          %i.fa.fa-square-o.fa-stack-2x
+          %i.fa.fa-spinner.fa-stack-1x
+        = link_to "Log In", login_path
+      %p{:style => "text-align: right"}/
+      = link_to "Home", books_path
+      %span.fa-stack.fa-lg
+        %i.fa.fa-square-o.fa-stack-2x
+        %i.fa.fa-home.fa-stack-1x
+      %br
+        =link_to "About", '/pages/1'
+        %span.fa-stack.fa-lg
+          %i.fa.fa-square-o.fa-stack-2x
+          %i.fa.fa-user.fa-stack-1x
+        %br
+          = link_to "My Library", current_user
+          %span.fa-stack.fa-lg
+            %i.fa.fa-square-o.fa-stack-2x
+            %i.fa.fa-coffee.fa-stack-1x
+          %br
+            = link_to t('Contact'), new_contact_path
+            %span.fa-stack.fa-lg
+              %i.fa.fa-square-o.fa-stack-2x
+              %i.fa.fa-pencil.fa-stack-1x
+            %br
+              = link_to "Log Out", logout_path
+              %span.fa-stack.fa-lg
+                %i.fa.fa-square-o.fa-stack-2x
+                %i.fa.fa-power-off.fa-stack-1x
+              
+              
+    
+          
+       
 
-            %li= link_to "Log Out", logout_path
-          - else
-            %li= link_to "Log In", login_path
-        #bookicon
-          %div{:style => "text-align: center"}
-            = image_tag 'bookicon.jpeg'
-            %br/
-            = link_to "Add a Book", new_book_path, class: 'btn btn-default'
+      
+  
+
+
+
+
+

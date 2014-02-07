@@ -7,3 +7,5 @@ jQuery ->
     sPaginationType: "full_numbers"
     "bPaginate": true
    )
+
+
