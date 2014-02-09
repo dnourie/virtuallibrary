@@ -46,16 +46,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  host: localhost
   database: virtuallibrary_development
   pool: 5
-  username: rubydb
-  password: Neptune8 
+  password:  
 
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: acsjvl
-  username: acsjvl
-  password: Neptune8
-  host: localhost
