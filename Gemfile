@@ -41,6 +41,7 @@ group :development, :test do
   gem 'database_cleaner'
 end
 
+#for deploy to Heruko
 gem 'rails_12factor', group: :production
 ruby "2.0.0"
 
