@@ -43,6 +43,7 @@
   # # # pool: 5
   # # username: virtuallibrary
   # password: 
+  
 development:
   adapter: postgresql
   encoding: unicode
