@@ -14,5 +14,5 @@
 //= require jquery_ujs
 //= require jquery.turbolinks
 //= require dataTables/jquery.dataTables.min
-//= reqiore dataTables/extra/TableTools
+//= reqiore dataTables/extras/TableTools
 //= require_tree .
