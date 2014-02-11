@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-    oTable = $('#books').dataTable({
+    $('#books').dataTable({
         "bJQueryUI": true,
         "sPaginationType": "full_numbers"
     });

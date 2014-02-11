@@ -1,8 +1,8 @@
 
-
 $(document).ready(function() {
-    oTable = $('#mylibrary').dataTable({
+    $('#mylibrary').dataTable({
         "bJQueryUI": true,
         "sPaginationType": "full_numbers"
     });
 } );
+
