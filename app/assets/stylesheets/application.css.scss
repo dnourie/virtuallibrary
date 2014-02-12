@@ -11,10 +11,8 @@
  *= require_self
  *= require jquery.ui.core
  *= require jquery.ui.theme
- *= require dataTables/src/demo_table_jui
- *= require dataTables/src/demo_table
- *= require dataTables/extras/TableTools
- *= require dataTables/extras/TableTools_JUI
+ *= require jquery.dataTables_themeroller
+  
  *= require_tree .
  */
  @import "bootstrap";
