@@ -9,10 +9,13 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require main
  *= require jquery.ui.core
  *= require jquery.ui.theme
  *= require jquery.dataTables_themeroller
-  
+ *= require jquery.ui.all
+ *= require bootstrap-theme.min
+ *= require font-awesome 
  *= require_tree .
  */
  @import "bootstrap";

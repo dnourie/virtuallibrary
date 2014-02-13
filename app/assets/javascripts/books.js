@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
     $('#books').dataTable({
         "bJQueryUI": true,

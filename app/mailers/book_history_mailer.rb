@@ -1,6 +1,6 @@
 class BookHistoryMailer < ActionMailer::Base
-  default from: "donotreply@atheistlibrary.com",
-          to: "donotreply@atheistlibrary.com"
+  default from: "donotreply@acsjvl.com",
+          to: "donotreply@acsjvl.com"
 
   # Send user-created email (subject and body) to the selected group of users.
   def create(book_history)

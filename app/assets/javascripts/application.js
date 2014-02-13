@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require jquery.turbolinks
 //= require jquery.dataTables.min
+//= require jquery.ui.all
 //= require_tree .
