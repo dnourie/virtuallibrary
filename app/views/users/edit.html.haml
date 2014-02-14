@@ -1,5 +1,10 @@
-%h1 Editing user
-= render 'form'
-= link_to 'Show', @user
-|
-\#{link_to 'Back', users_path}
+.container
+  .row
+  .col-md-3
+  .col-md-6
+    %p
+    #loginform/
+    = render 'form'
+    %br
+    = link_to 'My Library', @user
+  
