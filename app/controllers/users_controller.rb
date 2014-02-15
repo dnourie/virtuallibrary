@@ -29,11 +29,12 @@ class UsersController < ApplicationController
 
   def create
   
-  if verify_recaptcha() && @user = User.new(user_params)
-    @user.save
+  @user = User.new(user_params)
+  if verify_recaptcha(:model => @user, :message => "Please enter the correct captcha!") && @user.save
     session[:user_id] = @user.id
     redirect_to root_url, notice: "Thank you for signing up!"
   else
+    flash.delete(:recaptcha_error)
     redirect_to signup_path, alert: "Sorry, fill all fields."
   end
 end

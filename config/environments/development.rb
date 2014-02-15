@@ -29,4 +29,6 @@ VirtualLibrary::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = false
+  ENV['RECAPTCHA_PUBLIC_KEY'] = '6Lej4O0SAAAAAH6u8a1-VwvPK0KMavnZKwswqXfC'
+  ENV['RECAPTCHA_PRIVATE_KEY'] = '6Lej4O0SAAAAAAuR76RhVJMWhmZMpEcG2T2DrTBR'
 end

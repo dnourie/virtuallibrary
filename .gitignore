@@ -18,3 +18,5 @@
 .yml
 .htaccess
 production.rb
+recaptcha.rb
+development.rb

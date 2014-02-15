@@ -43,6 +43,6 @@ group :development, :test do
 end
 
 #for deploy to Heruko
-gem 'rails_12factor', group: :production
+#gem 'rails_12factor', group: :production
 ruby "2.0.0"
 
