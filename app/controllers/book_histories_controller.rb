@@ -27,7 +27,10 @@ class BookHistoriesController < ApplicationController
     @book_history = BookHistory.new(book_history_params)
     respond_to do |format|
       if @book_history.save
+        #This first email goes to tell the book owner the book is being borrowed.
         BookHistoryMailer.create(@book_history).deliver
+        #This second email goes to the book borrower
+        BookBorrowed.borrowed(@book_history).deliver
         format.html { redirect_to @book_history.book, notice: 'You have successfully checked out this book!' }
       else
         format.html { redirect_to @book_history.book, notice: 'Oops, couldn\'t check out the book.' }

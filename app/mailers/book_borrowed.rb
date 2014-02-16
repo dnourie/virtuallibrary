@@ -1,11 +1,11 @@
-class BookReturnedNotice < ActionMailer::Base
+class BookBorrowed < ActionMailer::Base
     default from: "donotreply@acsjvl.com",
           to: "donotreply@acsjvl.com"
 
   # Send user-created email (subject and body) to the selected group of users.
-  def bookreturned(book_history)
+  def borrowed(book_history)
     @book_history = book_history
-    subject = "The book -- #{@book_history.book.title} -- has been returned!"
+    subject = "You have borrowed the book -- #{@book_history.book.title}!"
     bcc = @book_history.book.user_email
     logger.error "bcc: #{bcc}"
     if bcc.present?
