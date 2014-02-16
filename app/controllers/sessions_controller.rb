@@ -7,13 +7,13 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: params[:email])
 
-     if verify_recaptcha(:model => @user, :message => "Please enter the correct captcha!") && user.authenticate(params[:password])
+    if verify_recaptcha() && user.authenticate(params[:password])
       session[:user_id] = user.id
-      verify_recaptcha()
       redirect_to root_url, notice: "Logged in!"
+      flash.delete(:recaptcha_error)
     else
       flash.delete(:recaptcha_error)
-      flash.alert = "Email, name, or password is invalid"
+      flash.alert = "Email, name, password, or recaptcha is invalid."
       render "new"
     end
   end

@@ -40,6 +40,7 @@ class BookHistoriesController < ApplicationController
   # PATCH/PUT /book_histories/1.json
   def update
     @book_history.update_attribute(:is_returned, true)
+    BookReturnedNotice.bookreturned(@book_history).deliver
     redirect_to @book_history.book, notice: "Book successfully returned."
   end
  

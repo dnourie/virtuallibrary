@@ -17,7 +17,7 @@
           = @book.author
         %p
           %strong Owner:
-          = @book.user_name
+          = @book.user_name + ' ' + @book.user.last_name
         %p
           %strong Rate this book:
         %p
@@ -43,7 +43,7 @@
             = image_tag 'openbook.jpeg'
         %tr
           %td{:align => "center"}
-            %h4= @book.title
+            %p= @book.title
     .col-md-2
     :javascript
       (function(d, t, e, m){

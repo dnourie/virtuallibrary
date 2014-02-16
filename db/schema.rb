@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140106153652) do
+ActiveRecord::Schema.define(version: 20140216191159) do
 
   create_table "book_categories", force: true do |t|
     t.integer "book_id"
@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(version: 20140106153652) do
     t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "last_name"
   end
 
 end

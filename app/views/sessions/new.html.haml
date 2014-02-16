@@ -4,11 +4,15 @@
   #loginform/
   %h3 Please Log In
   %p
-  = form_tag sessions_path do
+  = form_tag sessions_path do 
     .field
       = label_tag :name
-      %br/
-      = text_field_tag :name, params[:name]
+      %br
+        = text_field_tag :name, params[:name]
+    .field
+      = label_tag :last_name
+      %br
+      = text_field :last_name, params[:last_name]
     .field
       = label_tag :email
       %br/
