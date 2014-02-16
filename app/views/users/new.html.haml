@@ -12,15 +12,15 @@
     .field
       = f.label :name
       %br
-        = f.text_field :name
+        = f.text_field :name, :required => true
     .field
       = f.label :last_name
       %br
-      = f.text_field :last_name
+      = f.text_field :last_name, :required => true
     .field
       = f.label :email
       %br
-        = f.text_field :email
+        = f.text_field :email, :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}'
     .field
       = f.label :password
       %br

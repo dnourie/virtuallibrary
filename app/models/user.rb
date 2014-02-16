@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   has_many :books
 
   validates :name, presence: true, uniqueness: true
+  validates :last_name, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
   validates :password, confirmation: true
   validates :password, :length => { :in => 6..20 }

@@ -8,15 +8,15 @@
     .field
       = label_tag :name
       %br
-        = text_field_tag :name, params[:name]
+        = text_field_tag :name, params[:name], :required => true
     .field
       = label_tag :last_name
       %br
-      = text_field :last_name, params[:last_name]
+      = text_field :last_name, params[:last_name], :required => true
     .field
       = label_tag :email
       %br/
-      = text_field_tag :email, params[:email]
+      = text_field_tag :email, params[:email], :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}'
     .field
       = label_tag :password
       %br/
