@@ -1,14 +1,12 @@
-%p#notice= notice
 .container
 	.row
 	.col-med-2
 	.col-med-5
-	%h3
-		= @page.title
-		%p
-		= (@page.content).html_safe
-		%p
-		= link_to 'Back', books_path
+		%h3
+			= @page.title
+			%p{:style => "text-align: left"}
+			= (@page.content).html_safe
+			%p
+			= link_to 'Back', books_path
 	.col-med-5
-
 

@@ -14,5 +14,7 @@
 //= require jquery_ujs
 //= require jquery.turbolinks
 //= require jquery.dataTables.min
+//= require html5shiv
+//= require respond.min.js
 //= require jquery.ui.all
 //= require_tree .

@@ -3,7 +3,7 @@
     .col-md-1
     .col-md-4
       #bookshow
-        %strong
+        %h4
           = @book.title
         %p
           = truncate @book.description, :length=>720
@@ -20,12 +20,11 @@
           = @book.user_name + ' ' + @book.user.last_name
         %p
           %strong Rate this book:
-        %p
           .rw-ui-container
-          %p
-            = link_to "Write Review", new_book_review_path(@book)
-          %p
-            = link_to pluralize(@book.reviews.size, "Review"), book_reviews_path(@book)
+        %p
+          = link_to "Write Review", new_book_review_path(@book)
+        %p
+          = link_to pluralize(@book.reviews.size, "Review"), book_reviews_path(@book)
         = link_to 'Back', books_path
     .col-md-5
       %table{:align => "right"}
@@ -56,17 +55,17 @@
                   options: {
                       "size": "medium",
                       "style": "ratingwidget"
-                  } 
+                  }
               });
               RW.render();
           };
       
           // Append Rating-Widget JavaScript library.
           var rw, s = d.getElementsByTagName(e)[0], id = "rw-js",
-              p = d.location.protocol, a = ("https:" == p ? "secure." + 
-              m + "js/" : "js." + m), ck = "Y" + t.getFullYear() + "M" + 
+              p = d.location.protocol, a = ("https:" == p ? "secure." +
+              m + "js/" : "js." + m), ck = "Y" + t.getFullYear() + "M" +
               t.getMonth() + "D" + t.getDate();
-          if (d.getElementById(id)) return;              
+          if (d.getElementById(id)) return;
           rw = d.createElement(e);
           rw.id = id; rw.async = true; rw.type = "text/javascript";
           rw.src = p + "//" + a + "external.min.js?ck=" + ck;

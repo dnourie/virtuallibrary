@@ -16,4 +16,6 @@ Category.create [{:name => 'Atheism'},
                 {:name => 'Travel'},
                 {:name => 'Math'},
                 {:name => 'Fiction'},
+                {:name => 'Biography'},
+                {:name => 'Autobiography'},
                 {:name => 'Other'}]
