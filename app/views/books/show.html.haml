@@ -1,7 +1,6 @@
 .container
   .row
-    .col-md-1
-    .col-md-4
+    .col-md-5
       #bookshow
         %h4
           = @book.title
@@ -26,7 +25,7 @@
         %p
           = link_to pluralize(@book.reviews.size, "Review"), book_reviews_path(@book)
         = link_to 'Back', books_path
-    .col-md-5
+    .col-md-7
       %table{:align => "right"}
         %tr
           %td{:align => "center"}
@@ -43,7 +42,6 @@
         %tr
           %td{:align => "center"}
             %p= @book.title
-    .col-md-2
     :javascript
       (function(d, t, e, m){
         // Async Rating-Widget initialization.

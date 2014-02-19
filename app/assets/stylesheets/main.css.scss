@@ -84,7 +84,7 @@ a:hover {color: $logo_blue; text-decoration: underline; }
 
 /* Borrow Book Image */
 
-div#bookimage {
+#bookimage {
   text-align:right;
   margin-left: 20px;
 	width: 150px;
@@ -94,12 +94,11 @@ div#bookimage {
 
 /* Individual book Show page */
 
-div#bookshow {
+#bookshow {
 text-align: left;
 padding: 10px;
-margin-left:10;
 width:400px;
-height:550px;
+height:700px;
 -webkit-border-radius: 20px;
 -moz-border-radius: 20px;
 border-radius: 20px;
