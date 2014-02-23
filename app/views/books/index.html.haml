@@ -15,19 +15,19 @@
         %th Description
         %th Status
         %th Owner
-    %tbody
-      - @books.each do |book| 
-        %tr
-          %td
-            %img{:align => "left", :src => book.image_url, :vspace => "8", :width => 60, :height => 80}/
-          %td= link_to book.title, {:action => 'show', :id => book.id}
-          %td= book.author
-          %td= book.category_names
-          %td= truncate book.description, :length=>200
-          %td
-            - borrowed = book.get_borrowed
-            - if book.is_borrowed?
-              %br Unavailable
-            -else
-              %br Available
-          %td= book.user_name + ' ' + book.user.last_name
+      %tbody
+        -@books.each do |book| 
+          %tr
+            %td
+              %img{:align => "left", :src => book.image_url, :vspace => "8", :width => 60, :height => 80}/
+            %td= link_to book.title, {:action => 'show', :id => book.id}
+            %td= book.author
+            %td= book.category_names
+            %td= truncate book.description, :length=>200
+            %td
+              - borrowed = book.get_borrowed
+              - if book.is_borrowed?
+                %br Unavailable
+              -else
+                %br Available
+            %td= book.user_name + ' ' + book.user.last_name

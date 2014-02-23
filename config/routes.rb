@@ -1,11 +1,11 @@
 VirtualLibrary::Application.routes.draw do
 
 
-  resources :users
+  resources :users, except: [:index, :destroy]
   resources :sessions
   
   resources :books do
-    resources :reviews
+    resources :reviews, except: [:edit, :update, :destroy]
     post 'borrow', on: :member
   end
 
@@ -22,7 +22,7 @@ VirtualLibrary::Application.routes.draw do
 
  
   root to:  'books#index'
-  resources :pages
+  resources :pages, except: [:index, :destroy]
   resources "contacts", only: [:new, :create]
 
 end
