@@ -5,16 +5,16 @@
     - if @books.empty?
       %span.text-warning There are no books!
     - else
-    %table#books.display/
-    %thead
-      %tr
-        %th Cover
-        %th Title
-        %th Author
-        %th Categories
-        %th Description
-        %th Status
-        %th Owner
+    %table#books.display
+      %thead
+        %tr
+          %th Cover
+          %th Title
+          %th Author
+          %th Categories
+          %th Description
+          %th Status
+          %th Owner
       %tbody
         -@books.each do |book| 
           %tr

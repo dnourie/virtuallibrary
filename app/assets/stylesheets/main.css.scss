@@ -163,7 +163,7 @@ font-size: 14px;
 line-height: 20px;
 }
 .flash_notice {
-background-color: $logo_green;
+
 border-color: $black;
 color: $white;
 }
@@ -179,6 +179,16 @@ color: $white;
 .hidden { display: none; 
 }
 
+/* footer text */
+
+div#footer {
+  background-color: $logo_green;
+  font-weight: bold;
+  text-align: center;
+  color: $white;
+  padding: 20px 15px;
+  margin-top: 20px;
+}
 
 
 

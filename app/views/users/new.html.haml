@@ -1,36 +1,36 @@
-.container
-.row
-.col-md-2.col-md-offset-4
-  #joinform/
-  %h3 New Member
-  %p
-  You must be a member of the
-  %a{:href => "sanjoseatheists.com"} Atheist Community of San Jose
-  to join. Please use your <b>FULL NAME</b>.
-  = form_for(@user) do |f|
-    - f.error_messages
-    .field
-      = f.label :name
-      %br
-        = f.text_field :name, :required => true
-    .field
-      = f.label :last_name
-      %br
-      = f.text_field :last_name, :required => true
-    .field
-      = f.label :email
-      %br
-        = f.text_field :email, :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}'
-    .field
-      = f.label :password
-      %br
-        = f.password_field :password
-    %div
-      = f.label :password_confirmation
-      %br
-        = f.password_field :password_confirmation
+.container-fluid
+  .row
+    .col-md-2.col-md-offset-4
+      #joinform/
+      %h3 New Member
+      %p
+      You must be a member of the
+      %a{:href => "sanjoseatheists.com"} Atheist Community of San Jose
+      to join. Please use your <b>FULL NAME</b>.
+      = form_for(@user) do |f|
+        - f.error_messages
+        .field
+          = f.label :name
+          %br
+            = f.text_field :name, :required => true
+        .field
+          = f.label :last_name
+          %br
+          = f.text_field :last_name, :required => true
+        .field
+          = f.label :email
+          %br
+            = f.text_field :email, :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}'
+        .field
+          = f.label :password
+          %br
+            = f.password_field :password
+        %div
+          = f.label :password_confirmation
+          %br
+            = f.password_field :password_confirmation
 
-        = recaptcha_tags
-    .actions
-      = f.submit
-  .col.md-6
+            = recaptcha_tags
+        .actions
+          = f.submit
+    .col.md-6
